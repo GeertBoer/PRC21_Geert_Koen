@@ -70,3 +70,5 @@ C:\Users\geert\Source\Repos\backups\PRC21_Geert_TheCoon koen2\AnimalShelter\obj\
 C:\Users\geert\Source\Repos\backups\PRC21_Geert_TheCoon koen2\AnimalShelter\obj\x86\Debug\AnimalShelter.pdb
 C:\Users\geert\Source\backupsGIT\PRC21_Geert_TheCoon koen2\AnimalShelter\obj\x86\Debug\AnimalShelter.exe
 C:\Users\geert\Source\backupsGIT\PRC21_Geert_TheCoon koen2\AnimalShelter\obj\x86\Debug\AnimalShelter.pdb
+C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\obj\x86\Debug\AnimalShelter.exe
+C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\obj\x86\Debug\AnimalShelter.pdb
