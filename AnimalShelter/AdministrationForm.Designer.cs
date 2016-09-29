@@ -342,7 +342,7 @@
             // lbIsReserved
             // 
             this.lbIsReserved.FormattingEnabled = true;
-            this.lbIsReserved.Location = new System.Drawing.Point(132, 41);
+            this.lbIsReserved.Location = new System.Drawing.Point(132, 42);
             this.lbIsReserved.Name = "lbIsReserved";
             this.lbIsReserved.Size = new System.Drawing.Size(120, 160);
             this.lbIsReserved.TabIndex = 20;
@@ -467,7 +467,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbCreation);
             this.Name = "AdministrationForm";
-            this.Text = "Animal Shelter";
+            this.Text = "Animalshelter";
             ((System.ComponentModel.ISupportInitialize)(this.nudDayBirthday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMonthBirthday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudYearBirthday)).EndInit();
