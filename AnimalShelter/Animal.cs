@@ -8,7 +8,7 @@ namespace AnimalShelter
     /// <summary>
     /// Class representing an animal in the shelter.
     /// </summary>
-    public abstract class Animal : ISellable
+    public abstract class Animal : ISellable, IComparable<Animal>
     {
         /// <summary>
         /// The chipnumber of the animal. Must be unique. Must be zero or greater than zero.
@@ -83,6 +83,9 @@ namespace AnimalShelter
             return info;
         }
 
-        
+        public int CompareTo(Animal a)
+        {
+            return Name.CompareTo(a.Name);
+        }
     }
 }
