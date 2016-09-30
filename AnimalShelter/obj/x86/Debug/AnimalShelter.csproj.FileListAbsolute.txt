@@ -72,3 +72,9 @@ C:\Users\geert\Source\backupsGIT\PRC21_Geert_TheCoon koen2\AnimalShelter\obj\x86
 C:\Users\geert\Source\backupsGIT\PRC21_Geert_TheCoon koen2\AnimalShelter\obj\x86\Debug\AnimalShelter.pdb
 C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\obj\x86\Debug\AnimalShelter.exe
 C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\obj\x86\Debug\AnimalShelter.pdb
+C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\bin\Debug\AnimalShelter.exe
+C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\bin\Debug\AnimalShelter.pdb
+C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\obj\x86\Debug\AnimalShelter.csprojResolveAssemblyReference.cache
+C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\obj\x86\Debug\AnimalShelter.AdministrationForm.resources
+C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\obj\x86\Debug\AnimalShelter.Properties.Resources.resources
+C:\Users\geert\Source\Repos\PRC21_Geert_Koen\AnimalShelter\obj\x86\Debug\AnimalShelter.csproj.GenerateResource.Cache

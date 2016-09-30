@@ -49,6 +49,18 @@ namespace AnimalShelter
             return null;
         }
 
+        public Animal FindAnimal(string name)
+        {
+            foreach (Animal a in animals)
+            {
+                if (a.Name == name)
+                {
+                    return a;
+                }
+            }
+            return null;
+        }
+
         public bool checkChipNr(int nr)
         {
             foreach (Animal a in animals)

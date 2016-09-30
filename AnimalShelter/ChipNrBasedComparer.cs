@@ -5,17 +5,17 @@ using System.Text;
 
 namespace AnimalShelter
 {
-    class PriceBasedComparer : IComparer<Animal>
+    class ChipNrBasedComparer : IComparer<Animal>
     {
         public int Compare(Animal x, Animal y)
         {
-            if (x.Price < y.Price)
-            {
-                return -1;
-            }
-            else if (x.Price > y.Price)
+            if (x.ChipRegistrationNumber > y.ChipRegistrationNumber)
             {
                 return 1;
+            }
+            else if (x.ChipRegistrationNumber < y.ChipRegistrationNumber)
+            {
+                return -1;
             }
             else
             {

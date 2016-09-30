@@ -41,7 +41,6 @@
             this.nudDayBirthday = new System.Windows.Forms.NumericUpDown();
             this.nudMonthBirthday = new System.Windows.Forms.NumericUpDown();
             this.nudYearBirthday = new System.Windows.Forms.NumericUpDown();
-            this.nudChipNumber = new System.Windows.Forms.NumericUpDown();
             this.nudWalkYear = new System.Windows.Forms.NumericUpDown();
             this.nudWalkDay = new System.Windows.Forms.NumericUpDown();
             this.nudWalkMonth = new System.Windows.Forms.NumericUpDown();
@@ -58,10 +57,10 @@
             this.btnSortNotReserved = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.nudChipNumber = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.nudDayBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMonthBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudYearBirthday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudChipNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWalkYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWalkDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWalkMonth)).BeginInit();
@@ -69,6 +68,7 @@
             this.gbCreation.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudChipNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // animalTypeComboBox
@@ -232,19 +232,6 @@
             0,
             0});
             // 
-            // nudChipNumber
-            // 
-            this.nudChipNumber.Enabled = false;
-            this.nudChipNumber.Location = new System.Drawing.Point(97, 101);
-            this.nudChipNumber.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudChipNumber.Name = "nudChipNumber";
-            this.nudChipNumber.Size = new System.Drawing.Size(129, 20);
-            this.nudChipNumber.TabIndex = 13;
-            // 
             // nudWalkYear
             // 
             this.nudWalkYear.Location = new System.Drawing.Point(177, 128);
@@ -349,6 +336,7 @@
             // 
             // gbCreation
             // 
+            this.gbCreation.Controls.Add(this.nudChipNumber);
             this.gbCreation.Controls.Add(this.animalTypeComboBox);
             this.gbCreation.Controls.Add(this.createAnimalButton);
             this.gbCreation.Controls.Add(this.label1);
@@ -361,7 +349,6 @@
             this.gbCreation.Controls.Add(this.lblWalkDate);
             this.gbCreation.Controls.Add(this.nudWalkYear);
             this.gbCreation.Controls.Add(this.tbName);
-            this.gbCreation.Controls.Add(this.nudChipNumber);
             this.gbCreation.Controls.Add(this.tbBadHabits);
             this.gbCreation.Controls.Add(this.nudYearBirthday);
             this.gbCreation.Controls.Add(this.nudDayBirthday);
@@ -429,6 +416,7 @@
             this.btnSortReserved.TabIndex = 25;
             this.btnSortReserved.Text = "Sort";
             this.btnSortReserved.UseVisualStyleBackColor = true;
+            this.btnSortReserved.Click += new System.EventHandler(this.btnSortReserved_Click);
             // 
             // btnSortNotReserved
             // 
@@ -458,6 +446,15 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Non reserved animals";
             // 
+            // nudChipNumber
+            // 
+            this.nudChipNumber.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.nudChipNumber.Location = new System.Drawing.Point(97, 101);
+            this.nudChipNumber.Name = "nudChipNumber";
+            this.nudChipNumber.Size = new System.Drawing.Size(129, 20);
+            this.nudChipNumber.TabIndex = 19;
+            this.nudChipNumber.Enabled = true;
+            // 
             // AdministrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,7 +468,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudDayBirthday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMonthBirthday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudYearBirthday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudChipNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWalkYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWalkDay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWalkMonth)).EndInit();
@@ -481,6 +477,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudChipNumber)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -500,7 +497,6 @@
         private System.Windows.Forms.NumericUpDown nudDayBirthday;
         private System.Windows.Forms.NumericUpDown nudMonthBirthday;
         private System.Windows.Forms.NumericUpDown nudYearBirthday;
-        private System.Windows.Forms.NumericUpDown nudChipNumber;
         private System.Windows.Forms.NumericUpDown nudWalkYear;
         private System.Windows.Forms.NumericUpDown nudWalkDay;
         private System.Windows.Forms.NumericUpDown nudWalkMonth;
@@ -517,6 +513,7 @@
         private System.Windows.Forms.Button btnSortReserved;
         private System.Windows.Forms.Button btnSortNotReserved;
         private System.Windows.Forms.Button btnDeleteAnimal;
+        private System.Windows.Forms.NumericUpDown nudChipNumber;
     }
 }
 

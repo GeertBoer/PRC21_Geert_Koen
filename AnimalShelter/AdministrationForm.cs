@@ -18,6 +18,7 @@ namespace AnimalShelter
             InitializeComponent();
             admin = new Administration();
             animalTypeComboBox.SelectedIndex = 0;
+            nudChipNumber.Enabled = true;
         }
 
         /// <summary>
@@ -122,7 +123,7 @@ namespace AnimalShelter
             }
             else
             {
-                throw new ArgumentNullException();
+                MessageBox.Show("die diertje is nie echt bruh");
             }
                         
         }
@@ -184,7 +185,38 @@ namespace AnimalShelter
 
         private void btnSortNotReserved_Click(object sender, EventArgs e)
         {
-            
+            List<Animal> animalList = new List<Animal>();
+
+            foreach (Animal a in lbNotReserved.Items)
+            {
+                animalList.Add(a);
+            }
+
+            animalList.Sort(new ChipNrBasedComparer());
+            lbNotReserved.Items.Clear();
+
+            foreach (Animal a in animalList)
+            {
+                lbNotReserved.Items.Add(a);
+            }
+        }
+
+        private void btnSortReserved_Click(object sender, EventArgs e)
+        {
+            List<Animal> animalList = new List<Animal>();
+
+            foreach(Animal a in lbIsReserved.Items)
+            {
+                animalList.Add(a);
+            }
+
+            animalList.Sort(new ChipNrBasedComparer());
+            lbIsReserved.Items.Clear();
+
+            foreach (Animal a in animalList)
+            {
+                lbIsReserved.Items.Add(a);
+            }
         }
     }
 }
