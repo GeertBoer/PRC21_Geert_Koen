@@ -172,6 +172,16 @@ namespace AnimalShelter
 
         private void btnDeleteSelectedAnimal_Click(object sender, EventArgs e)
         {
+            if (lbNotReserved.SelectedItem != null)
+            {
+                Animal a = (Animal)lbNotReserved.SelectedItem;
+                admin.RemoveAnimal(a.ChipRegistrationNumber);
+            }
+            if (lbIsReserved.SelectedItem != null)
+            {
+                Animal a = (Animal)lbIsReserved.SelectedItem;
+                admin.RemoveAnimal(a.ChipRegistrationNumber);
+            }
             lbIsReserved.Items.Remove(lbIsReserved.SelectedItem);
             lbNotReserved.Items.Remove(lbNotReserved.SelectedItem);
             lbIsReserved.Update();

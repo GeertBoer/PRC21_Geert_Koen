@@ -31,6 +31,27 @@ namespace AnimalShelterTest
             Assert.AreEqual("Henk", cat.Name);
             Assert.AreEqual("flopt 'em kooi", cat.BadHabits);
         }
+
+        [TestMethod]
+        public void PriceTestWhenBadHabitsAreNormal()
+        {
+            Cat cat = new Cat(38, date, "Henk", "flopt 'em kooi");
+            Assert.AreEqual(46, cat.Price);
+        }
+
+        [TestMethod]
+        public void PriceTestWhenBadHabitsAreEmpty()
+        {
+            Cat cat = new Cat(38, date, "Henk", "");
+            Assert.AreEqual(60, cat.Price);
+        }
+
+        [TestMethod]
+        public void PriceTestWhenBadHabitsAreExtremelyLong()
+        {
+            Cat cat = new Cat(38, date, "Henk", "flopt 'em kooiewfkjbweifbkjnkfjcnfwnedcikjenwkfnilearjvblueshbfvluhbeufvhbaerluvbluaerkooiewfkjbweifbkjnkfjcnfwnedcikjenwkfnilearjvblueshbfvluhbeufvhbaerluvbluaer");
+            Assert.AreEqual(0, cat.Price);
+        }
     }
 }
 

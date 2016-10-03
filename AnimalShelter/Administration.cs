@@ -26,12 +26,15 @@ namespace AnimalShelter
 
         public bool RemoveAnimal(int chipRegistrationNumber)
         {
-            foreach (Animal a in animals)
+            if (chipRegistrationNumber != null)
             {
-                if (a.ChipRegistrationNumber == chipRegistrationNumber)
+                foreach (Animal a in animals)
                 {
-                    animals.Remove(a);                    
-                    return true;
+                    if (a.ChipRegistrationNumber == chipRegistrationNumber)
+                    {
+                        animals.Remove(a);
+                        return true;
+                    }
                 }
             }
             return false;

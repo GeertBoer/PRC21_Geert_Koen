@@ -30,7 +30,11 @@ namespace AnimalShelter
         {
             get
             {
-                return (decimal)60.00 - BadHabits.Length; 
+                if (BadHabits.Length <= 60)
+                {
+                    return (decimal)60.00 - BadHabits.Length;
+                }
+                else return 0;
             }
         }
 

@@ -53,7 +53,11 @@ namespace AnimalShelter
                    string name, SimpleDate lwd) : base(chipRegistrationNumber, dateOfBirth, name)
         {
             // TODO: Modify the constructor. Make sure it initializes all properties of the class.
-            LastWalkDate = lwd;
+            if (chipRegistrationNumber >= 0 && dateOfBirth != null && name != null && name != "" && lwd != null)
+            {
+                LastWalkDate = lwd;
+            }
+            else throw new ArgumentException("vul de juiste waardes in!");
         }
 
         /// <summary>

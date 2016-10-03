@@ -13,7 +13,7 @@ namespace AnimalShelterTest
         {
             Dog d = new Dog(38, date, "hundje", date);
             d.LastWalkDate = date;
-            Assert.AreEqual(d.LastWalkDate, date);
+            Assert.AreEqual(date, d.LastWalkDate);
         }
 
         [TestMethod]
