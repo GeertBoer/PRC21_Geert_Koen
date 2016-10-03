@@ -40,7 +40,7 @@ namespace AnimalShelter
                                                        Convert.ToInt32(nudYearBirthday.Value));
                 try
                 {
-                    if (admin.checkChipNr(chipNumber))
+                    if (admin.CheckChipNrIsAvailable(chipNumber))
                     {
                         Cat cat = new Cat(chipNumber, simpleDate, tbName.Text, tbBadHabits.Text);
                         if (!rbIsReserved.Checked)
@@ -55,7 +55,7 @@ namespace AnimalShelter
                             lbIsReserved.Items.Add(cat);
                         }
                     }
-                    else if (!admin.checkChipNr(chipNumber))
+                    else if (!admin.CheckChipNrIsAvailable(chipNumber))
                     {
                         MessageBox.Show("Toevoegen niet gelukt");
                     }                   
@@ -75,7 +75,7 @@ namespace AnimalShelter
                                                        Convert.ToInt32(nudWalkYear.Value));
                 try
                 {
-                    if (admin.checkChipNr(chipNumber))
+                    if (admin.CheckChipNrIsAvailable(chipNumber))
                     {                        
                         Dog dog = new Dog(chipNumber, simpleDate, tbName.Text, walkDate);
                         if (!rbIsReserved.Checked)
@@ -91,7 +91,7 @@ namespace AnimalShelter
                             lbIsReserved.Items.Add(dog);
                         }
                     }
-                    else if (!admin.checkChipNr(chipNumber))
+                    else if (!admin.CheckChipNrIsAvailable(chipNumber))
                     {
                         MessageBox.Show("Toevoegen niet gelukt");
                     }

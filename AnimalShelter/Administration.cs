@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AnimalShelter
 {
-    class Administration
+    public class Administration
     {
         private List<Animal> animals; 
 
@@ -61,8 +61,10 @@ namespace AnimalShelter
             return null;
         }
 
-        public bool checkChipNr(int nr)
+        public bool CheckChipNrIsAvailable(int nr)
         {
+            if (nr < 0) return false;
+
             foreach (Animal a in animals)
             {
                 if (a.ChipRegistrationNumber == nr)
