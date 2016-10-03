@@ -54,11 +54,14 @@ namespace AnimalShelter
 
         public Animal FindAnimal(string name)
         {
-            foreach (Animal a in animals)
+            if (name != null)
             {
-                if (a.Name == name)
+                foreach (Animal a in animals)
                 {
-                    return a;
+                    if (a.Name == name)
+                    {
+                        return a;
+                    }
                 }
             }
             return null;

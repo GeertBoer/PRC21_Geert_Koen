@@ -66,6 +66,15 @@ namespace AnimalShelterTest
         }
 
         [TestMethod]
+        public void FindNullAnimalTestString()
+        {
+            Administration a = new Administration();
+
+            Cat catToFind = a.FindAnimal(null) as Cat;
+            Assert.AreEqual(null, catToFind);
+        }
+
+        [TestMethod]
         public void FindExistingAnimalTestInt()
         {
             Cat c = new Cat(38, date, "Ryan", "Zit altijd in de ballenbak met een kater");
