@@ -30,7 +30,7 @@ namespace AnimalShelterTest
         [TestMethod]
         public void RemoveExistingCatTest()
         {
-            Cat c = new Cat(38, date, "Ryan", "Zit altijd in de ballenbak met een kater");
+            Cat c = new Cat(38, date, "Ryan", "Killed Harambae");
             Administration a = new Administration();
             a.Add(c);
             bool succes = a.RemoveAnimal(c.ChipRegistrationNumber);
@@ -52,7 +52,7 @@ namespace AnimalShelterTest
             Administration a = new Administration();
             a.Add(c);
 
-            Cat catToFind = a.FindAnimal(38) as Cat;
+            Cat catToFind = a.FindAnimal("Ryan") as Cat;
             Assert.AreEqual(c, catToFind);
         }
 
@@ -61,7 +61,7 @@ namespace AnimalShelterTest
         {
             Administration a = new Administration();
 
-            Cat catToFind = a.FindAnimal(38) as Cat;
+            Cat catToFind = a.FindAnimal("BushDid9/11") as Cat;
             Assert.AreEqual(null, catToFind);
         }
 
