@@ -36,5 +36,12 @@ namespace AnimalShelterTest
             Dog d = new Dog(0, date, "hundje", date);
             Assert.AreEqual(200.00m, d.Price);
         }
+
+        [TestMethod]
+        public void ToStringTest()
+        {
+            Dog d = new Dog(38, date, "hundje", date);
+            Assert.AreEqual("Dog: 38, 12-12-1999, hundje, not reserved, 12-12-1999.", d.ToString());
+        }
     }
 }
