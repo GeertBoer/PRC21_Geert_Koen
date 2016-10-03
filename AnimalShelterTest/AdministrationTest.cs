@@ -46,7 +46,7 @@ namespace AnimalShelterTest
         }
 
         [TestMethod]
-        public void FindExistingAnimalTest()
+        public void FindExistingAnimalTestString()
         {
             Cat c = new Cat(38, date, "Ryan", "Zit altijd in de ballenbak met een kater");
             Administration a = new Administration();
@@ -57,11 +57,31 @@ namespace AnimalShelterTest
         }
 
         [TestMethod]
-        public void FindNotExistingAnimalTest()
+        public void FindNotExistingAnimalTestString()
         {
             Administration a = new Administration();
 
             Cat catToFind = a.FindAnimal("BushDid9/11") as Cat;
+            Assert.AreEqual(null, catToFind);
+        }
+
+        [TestMethod]
+        public void FindExistingAnimalTestInt()
+        {
+            Cat c = new Cat(38, date, "Ryan", "Zit altijd in de ballenbak met een kater");
+            Administration a = new Administration();
+            a.Add(c);
+
+            Cat catToFind = a.FindAnimal(38) as Cat;
+            Assert.AreEqual(c, catToFind);
+        }
+
+        [TestMethod]
+        public void FindNotExistingAnimalTestInt()
+        {
+            Administration a = new Administration();
+
+            Cat catToFind = a.FindAnimal(38383838) as Cat;
             Assert.AreEqual(null, catToFind);
         }
 
