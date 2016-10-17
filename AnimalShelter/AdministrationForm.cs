@@ -19,7 +19,6 @@ namespace AnimalShelter
             admin = new Administration();
             animalTypeComboBox.SelectedIndex = 0;
             nudChipNumber.Enabled = true;
-            btnSave.BackColor = Color.BlueViolet;
         }
 
         /// <summary>
