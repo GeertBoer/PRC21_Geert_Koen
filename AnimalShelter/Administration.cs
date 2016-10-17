@@ -1,24 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
 namespace AnimalShelter
 {
+    [Serializable]
     public class Administration
     {
-        private List<Animal> animals; 
+        public List<Animal> Animals { get; private set; }
+/* SERIAL KAK
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Animals", this.Animals);
+        }
 
+        public Administration(SerializationInfo info, StreamingContext context)
+        {
+            Animals = (List<Animal>)info.GetValue("Animals", Animals.GetType());
+        }
+*/
         public Administration()
         {
-            animals = new List<Animal>();
+            Animals = new List<Animal>();
         }
 
         public bool Add(Animal animal)
         {         
             if(animal != null)
             {
-                animals.Add(animal);
+                Animals.Add(animal);
                 return true;
             }
             return false;  
@@ -26,13 +40,13 @@ namespace AnimalShelter
 
         public bool RemoveAnimal(int chipRegistrationNumber)
         {
-            if (chipRegistrationNumber != null)
+            if (chipRegistrationNumber >= 0)
             {
-                foreach (Animal a in animals)
+                foreach (Animal a in Animals)
                 {
                     if (a.ChipRegistrationNumber == chipRegistrationNumber)
                     {
-                        animals.Remove(a);
+                        Animals.Remove(a);
                         return true;
                     }
                 }
@@ -42,7 +56,7 @@ namespace AnimalShelter
 
         public Animal FindAnimal(int chipRegistrationNumber)
         {
-            foreach (Animal a in animals)
+            foreach (Animal a in Animals)
             {
                 if(a.ChipRegistrationNumber == chipRegistrationNumber)
                 {
@@ -56,7 +70,7 @@ namespace AnimalShelter
         {
             if (name != null)
             {
-                foreach (Animal a in animals)
+                foreach (Animal a in Animals)
                 {
                     if (a.Name == name)
                     {
@@ -71,7 +85,7 @@ namespace AnimalShelter
         {
             if (nr < 0) return false;
 
-            foreach (Animal a in animals)
+            foreach (Animal a in Animals)
             {
                 if (a.ChipRegistrationNumber == nr)
                 {
@@ -79,6 +93,38 @@ namespace AnimalShelter
                 }
             }
             return true;
+        }
+
+        public void AddOrRemoveReservation(int chipNr)
+        {
+            Animal animal = FindAnimal(chipNr);
+            Animals.Remove(animal);
+            if (animal.IsReserved == true)
+            {
+                animal.IsReserved = false;
+            }
+            else animal.IsReserved = true;
+
+            Animals.Add(animal);
+        }
+
+        public void Save(string path)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            
+            using (Stream stream = new FileStream(path, FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(stream, Animals);
+            }
+        }
+
+        public void Load(string path)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            using (Stream stream = new FileStream(path, FileMode.Open))
+            {
+                Animals = (List<Animal>)formatter.Deserialize(stream);
+            }
         }
     }
 }

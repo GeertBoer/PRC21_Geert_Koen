@@ -19,6 +19,7 @@ namespace AnimalShelter
             admin = new Administration();
             animalTypeComboBox.SelectedIndex = 0;
             nudChipNumber.Enabled = true;
+            btnSave.BackColor = Color.BlueViolet;
         }
 
         /// <summary>
@@ -124,8 +125,7 @@ namespace AnimalShelter
             else
             {
                 MessageBox.Show("die diertje is nie echt bruh");
-            }
-                        
+            }      
         }
 
         private int chipNumberCounter(decimal chipNumber)
@@ -193,40 +193,49 @@ namespace AnimalShelter
             admin.RemoveAnimal(Convert.ToInt32(nudFindAnimal.Value));                         
         }
 
-        private void btnSortNotReserved_Click(object sender, EventArgs e)
+        private void btnSortReserved_Click(object sender, EventArgs e)
         {
-            List<Animal> animalList = new List<Animal>();
+            admin.Animals.Sort(new ChipNrBasedComparer());
+            updateListBoxes();
+        }
 
-            foreach (Animal a in lbNotReserved.Items)
-            {
-                animalList.Add(a);
-            }
+        private void btnReserve_Click(object sender, EventArgs e)
+        {
+            int chipNr = (int)nudFindAnimal.Value;
+            admin.AddOrRemoveReservation(chipNr);
 
-            animalList.Sort(new ChipNrBasedComparer());
+            updateListBoxes();
+        }
+
+        private void updateListBoxes()
+        {
+            lbIsReserved.Items.Clear();
             lbNotReserved.Items.Clear();
 
-            foreach (Animal a in animalList)
+            foreach (Animal a in admin.Animals)
             {
-                lbNotReserved.Items.Add(a);
+                if (a.IsReserved == true)
+                {
+                    lbIsReserved.Items.Add(a);
+                }
+                else lbNotReserved.Items.Add(a);
             }
         }
 
-        private void btnSortReserved_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            List<Animal> animalList = new List<Animal>();
+            saveFileDialog1.ShowDialog();
+            string sve = saveFileDialog1.FileName;
+            MessageBox.Show(sve);
+            admin.Save(sve);
+        }
 
-            foreach(Animal a in lbIsReserved.Items)
-            {
-                animalList.Add(a);
-            }
-
-            animalList.Sort(new ChipNrBasedComparer());
-            lbIsReserved.Items.Clear();
-
-            foreach (Animal a in animalList)
-            {
-                lbIsReserved.Items.Add(a);
-            }
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string loadPath = openFileDialog1.FileName;
+            admin.Load(loadPath);
+            updateListBoxes();
         }
     }
 }

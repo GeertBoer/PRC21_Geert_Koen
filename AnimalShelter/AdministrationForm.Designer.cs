@@ -49,15 +49,19 @@
             this.lbNotReserved = new System.Windows.Forms.ListBox();
             this.lbIsReserved = new System.Windows.Forms.ListBox();
             this.gbCreation = new System.Windows.Forms.GroupBox();
+            this.nudChipNumber = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReserve = new System.Windows.Forms.Button();
             this.btnDeleteAnimal = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnDeleteSelectedAnimal = new System.Windows.Forms.Button();
-            this.btnSortReserved = new System.Windows.Forms.Button();
-            this.btnSortNotReserved = new System.Windows.Forms.Button();
+            this.btnSort = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.nudChipNumber = new System.Windows.Forms.NumericUpDown();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnLoad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudDayBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMonthBirthday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudYearBirthday)).BeginInit();
@@ -66,9 +70,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudWalkMonth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFindAnimal)).BeginInit();
             this.gbCreation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudChipNumber)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudChipNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // animalTypeComboBox
@@ -86,7 +90,7 @@
             // 
             // createAnimalButton
             // 
-            this.createAnimalButton.Location = new System.Drawing.Point(133, 17);
+            this.createAnimalButton.Location = new System.Drawing.Point(162, 19);
             this.createAnimalButton.Name = "createAnimalButton";
             this.createAnimalButton.Size = new System.Drawing.Size(64, 23);
             this.createAnimalButton.TabIndex = 1;
@@ -96,9 +100,9 @@
             // 
             // showInfoButton
             // 
-            this.showInfoButton.Location = new System.Drawing.Point(67, 19);
+            this.showInfoButton.Location = new System.Drawing.Point(62, 19);
             this.showInfoButton.Name = "showInfoButton";
-            this.showInfoButton.Size = new System.Drawing.Size(75, 23);
+            this.showInfoButton.Size = new System.Drawing.Size(63, 23);
             this.showInfoButton.TabIndex = 2;
             this.showInfoButton.Text = "Show info";
             this.showInfoButton.UseVisualStyleBackColor = true;
@@ -303,7 +307,7 @@
             // 
             // nudFindAnimal
             // 
-            this.nudFindAnimal.Location = new System.Drawing.Point(6, 22);
+            this.nudFindAnimal.Location = new System.Drawing.Point(5, 20);
             this.nudFindAnimal.Name = "nudFindAnimal";
             this.nudFindAnimal.Size = new System.Drawing.Size(55, 20);
             this.nudFindAnimal.TabIndex = 17;
@@ -311,7 +315,7 @@
             // rbIsReserved
             // 
             this.rbIsReserved.AutoSize = true;
-            this.rbIsReserved.Location = new System.Drawing.Point(6, 160);
+            this.rbIsReserved.Location = new System.Drawing.Point(6, 151);
             this.rbIsReserved.Name = "rbIsReserved";
             this.rbIsReserved.Size = new System.Drawing.Size(83, 17);
             this.rbIsReserved.TabIndex = 18;
@@ -321,7 +325,7 @@
             // lbNotReserved
             // 
             this.lbNotReserved.FormattingEnabled = true;
-            this.lbNotReserved.Location = new System.Drawing.Point(6, 42);
+            this.lbNotReserved.Location = new System.Drawing.Point(6, 33);
             this.lbNotReserved.Name = "lbNotReserved";
             this.lbNotReserved.Size = new System.Drawing.Size(120, 160);
             this.lbNotReserved.TabIndex = 19;
@@ -329,7 +333,7 @@
             // lbIsReserved
             // 
             this.lbIsReserved.FormattingEnabled = true;
-            this.lbIsReserved.Location = new System.Drawing.Point(132, 42);
+            this.lbIsReserved.Location = new System.Drawing.Point(132, 33);
             this.lbIsReserved.Name = "lbIsReserved";
             this.lbIsReserved.Size = new System.Drawing.Size(120, 160);
             this.lbIsReserved.TabIndex = 20;
@@ -353,98 +357,12 @@
             this.gbCreation.Controls.Add(this.nudYearBirthday);
             this.gbCreation.Controls.Add(this.nudDayBirthday);
             this.gbCreation.Controls.Add(this.nudMonthBirthday);
-            this.gbCreation.Location = new System.Drawing.Point(12, 14);
+            this.gbCreation.Location = new System.Drawing.Point(9, 8);
             this.gbCreation.Name = "gbCreation";
-            this.gbCreation.Size = new System.Drawing.Size(235, 180);
+            this.gbCreation.Size = new System.Drawing.Size(235, 172);
             this.gbCreation.TabIndex = 21;
             this.gbCreation.TabStop = false;
             this.gbCreation.Text = "Add Animals";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnDeleteAnimal);
-            this.groupBox1.Controls.Add(this.nudFindAnimal);
-            this.groupBox1.Controls.Add(this.showInfoButton);
-            this.groupBox1.Location = new System.Drawing.Point(12, 200);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(235, 55);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Get animal info";
-            // 
-            // btnDeleteAnimal
-            // 
-            this.btnDeleteAnimal.Location = new System.Drawing.Point(148, 19);
-            this.btnDeleteAnimal.Name = "btnDeleteAnimal";
-            this.btnDeleteAnimal.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteAnimal.TabIndex = 18;
-            this.btnDeleteAnimal.Text = "Delete";
-            this.btnDeleteAnimal.UseVisualStyleBackColor = true;
-            this.btnDeleteAnimal.Click += new System.EventHandler(this.btnDeleteAnimal_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnDeleteSelectedAnimal);
-            this.groupBox2.Controls.Add(this.btnSortReserved);
-            this.groupBox2.Controls.Add(this.btnSortNotReserved);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.lbNotReserved);
-            this.groupBox2.Controls.Add(this.lbIsReserved);
-            this.groupBox2.Location = new System.Drawing.Point(253, 14);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(260, 241);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "List of Animals in shelter";
-            // 
-            // btnDeleteSelectedAnimal
-            // 
-            this.btnDeleteSelectedAnimal.Location = new System.Drawing.Point(73, 212);
-            this.btnDeleteSelectedAnimal.Name = "btnDeleteSelectedAnimal";
-            this.btnDeleteSelectedAnimal.Size = new System.Drawing.Size(109, 23);
-            this.btnDeleteSelectedAnimal.TabIndex = 26;
-            this.btnDeleteSelectedAnimal.Text = "Delete selected";
-            this.btnDeleteSelectedAnimal.UseVisualStyleBackColor = true;
-            this.btnDeleteSelectedAnimal.Click += new System.EventHandler(this.btnDeleteSelectedAnimal_Click);
-            // 
-            // btnSortReserved
-            // 
-            this.btnSortReserved.Location = new System.Drawing.Point(188, 212);
-            this.btnSortReserved.Name = "btnSortReserved";
-            this.btnSortReserved.Size = new System.Drawing.Size(63, 23);
-            this.btnSortReserved.TabIndex = 25;
-            this.btnSortReserved.Text = "Sort";
-            this.btnSortReserved.UseVisualStyleBackColor = true;
-            this.btnSortReserved.Click += new System.EventHandler(this.btnSortReserved_Click);
-            // 
-            // btnSortNotReserved
-            // 
-            this.btnSortNotReserved.Location = new System.Drawing.Point(6, 212);
-            this.btnSortNotReserved.Name = "btnSortNotReserved";
-            this.btnSortNotReserved.Size = new System.Drawing.Size(61, 23);
-            this.btnSortNotReserved.TabIndex = 24;
-            this.btnSortNotReserved.Text = "Sort";
-            this.btnSortNotReserved.UseVisualStyleBackColor = true;
-            this.btnSortNotReserved.Click += new System.EventHandler(this.btnSortNotReserved_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(129, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Reserved animals";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Non reserved animals";
             // 
             // nudChipNumber
             // 
@@ -453,16 +371,129 @@
             this.nudChipNumber.Name = "nudChipNumber";
             this.nudChipNumber.Size = new System.Drawing.Size(129, 20);
             this.nudChipNumber.TabIndex = 19;
-            this.nudChipNumber.Enabled = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnReserve);
+            this.groupBox1.Controls.Add(this.btnDeleteAnimal);
+            this.groupBox1.Controls.Add(this.nudFindAnimal);
+            this.groupBox1.Controls.Add(this.showInfoButton);
+            this.groupBox1.Location = new System.Drawing.Point(9, 182);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(235, 49);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Get animal info";
+            // 
+            // btnReserve
+            // 
+            this.btnReserve.Location = new System.Drawing.Point(177, 19);
+            this.btnReserve.Name = "btnReserve";
+            this.btnReserve.Size = new System.Drawing.Size(56, 23);
+            this.btnReserve.TabIndex = 24;
+            this.btnReserve.Text = "Reserve";
+            this.btnReserve.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteAnimal
+            // 
+            this.btnDeleteAnimal.Location = new System.Drawing.Point(126, 19);
+            this.btnDeleteAnimal.Name = "btnDeleteAnimal";
+            this.btnDeleteAnimal.Size = new System.Drawing.Size(50, 23);
+            this.btnDeleteAnimal.TabIndex = 18;
+            this.btnDeleteAnimal.Text = "Delete";
+            this.btnDeleteAnimal.UseVisualStyleBackColor = true;
+            this.btnDeleteAnimal.Click += new System.EventHandler(this.btnDeleteAnimal_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnDeleteSelectedAnimal);
+            this.groupBox2.Controls.Add(this.btnSort);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.lbNotReserved);
+            this.groupBox2.Controls.Add(this.lbIsReserved);
+            this.groupBox2.Location = new System.Drawing.Point(250, 8);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(260, 235);
+            this.groupBox2.TabIndex = 23;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "List of Animals in shelter";
+            // 
+            // btnDeleteSelectedAnimal
+            // 
+            this.btnDeleteSelectedAnimal.Location = new System.Drawing.Point(105, 199);
+            this.btnDeleteSelectedAnimal.Name = "btnDeleteSelectedAnimal";
+            this.btnDeleteSelectedAnimal.Size = new System.Drawing.Size(147, 23);
+            this.btnDeleteSelectedAnimal.TabIndex = 26;
+            this.btnDeleteSelectedAnimal.Text = "Delete selected";
+            this.btnDeleteSelectedAnimal.UseVisualStyleBackColor = true;
+            this.btnDeleteSelectedAnimal.Click += new System.EventHandler(this.btnDeleteSelectedAnimal_Click);
+            // 
+            // btnSort
+            // 
+            this.btnSort.Location = new System.Drawing.Point(36, 199);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(63, 23);
+            this.btnSort.TabIndex = 25;
+            this.btnSort.Text = "Sort";
+            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSortReserved_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(129, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Reserved animals";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Non reserved animals";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Comic Sans MS", 128.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Yellow;
+            this.btnSave.Location = new System.Drawing.Point(12, 249);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(495, 271);
+            this.btnSave.TabIndex = 24;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(746, 219);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.TabIndex = 25;
+            this.btnLoad.Text = "ah KOOI";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // AdministrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 258);
+            this.ClientSize = new System.Drawing.Size(1139, 532);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbCreation);
+            this.MaximizeBox = false;
             this.Name = "AdministrationForm";
             this.Text = "Animalshelter";
             ((System.ComponentModel.ISupportInitialize)(this.nudDayBirthday)).EndInit();
@@ -474,10 +505,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudFindAnimal)).EndInit();
             this.gbCreation.ResumeLayout(false);
             this.gbCreation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudChipNumber)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudChipNumber)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -510,10 +541,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDeleteSelectedAnimal;
-        private System.Windows.Forms.Button btnSortReserved;
-        private System.Windows.Forms.Button btnSortNotReserved;
+        private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnDeleteAnimal;
         private System.Windows.Forms.NumericUpDown nudChipNumber;
+        private System.Windows.Forms.Button btnReserve;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button btnLoad;
     }
 }
 
