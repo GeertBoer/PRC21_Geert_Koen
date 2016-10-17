@@ -224,17 +224,20 @@ namespace AnimalShelter
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.ShowDialog();
-            string sve = saveFileDialog1.FileName;
-            MessageBox.Show(sve);
-            admin.Save(sve);
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string savePath = saveFileDialog1.FileName;
+                admin.Save(savePath);
+            }
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            string loadPath = openFileDialog1.FileName;
-            admin.Load(loadPath);
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string loadPath = openFileDialog1.FileName;
+                admin.Load(loadPath);
+            }
             updateListBoxes();
         }
 

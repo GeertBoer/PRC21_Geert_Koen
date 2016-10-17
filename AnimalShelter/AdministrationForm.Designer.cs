@@ -91,7 +91,7 @@
             // 
             // createAnimalButton
             // 
-            this.createAnimalButton.Location = new System.Drawing.Point(162, 19);
+            this.createAnimalButton.Location = new System.Drawing.Point(177, 17);
             this.createAnimalButton.Name = "createAnimalButton";
             this.createAnimalButton.Size = new System.Drawing.Size(64, 23);
             this.createAnimalButton.TabIndex = 1;
@@ -101,7 +101,7 @@
             // 
             // showInfoButton
             // 
-            this.showInfoButton.Location = new System.Drawing.Point(62, 19);
+            this.showInfoButton.Location = new System.Drawing.Point(67, 18);
             this.showInfoButton.Name = "showInfoButton";
             this.showInfoButton.Size = new System.Drawing.Size(63, 23);
             this.showInfoButton.TabIndex = 2;
@@ -112,68 +112,68 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 54);
+            this.label1.Location = new System.Drawing.Point(6, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Name";
+            this.label1.Text = "Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 77);
+            this.label2.Location = new System.Drawing.Point(6, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Birthday";
+            this.label2.Text = "Birthday:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 103);
+            this.label3.Location = new System.Drawing.Point(6, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Chip number";
+            this.label3.Text = "Chip number:";
             // 
             // lblBadHabits
             // 
             this.lblBadHabits.AutoSize = true;
-            this.lblBadHabits.Location = new System.Drawing.Point(3, 130);
+            this.lblBadHabits.Location = new System.Drawing.Point(6, 127);
             this.lblBadHabits.Name = "lblBadHabits";
-            this.lblBadHabits.Size = new System.Drawing.Size(57, 13);
+            this.lblBadHabits.Size = new System.Drawing.Size(60, 13);
             this.lblBadHabits.TabIndex = 6;
-            this.lblBadHabits.Text = "Bad habits";
+            this.lblBadHabits.Text = "Bad habits:";
             this.lblBadHabits.Visible = false;
             // 
             // lblWalkDate
             // 
             this.lblWalkDate.AutoSize = true;
-            this.lblWalkDate.Location = new System.Drawing.Point(3, 130);
+            this.lblWalkDate.Location = new System.Drawing.Point(6, 127);
             this.lblWalkDate.Name = "lblWalkDate";
-            this.lblWalkDate.Size = new System.Drawing.Size(76, 13);
+            this.lblWalkDate.Size = new System.Drawing.Size(79, 13);
             this.lblWalkDate.TabIndex = 7;
-            this.lblWalkDate.Text = "Last walk date";
+            this.lblWalkDate.Text = "Last walk date:";
             this.lblWalkDate.Visible = false;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(97, 51);
+            this.tbName.Location = new System.Drawing.Point(91, 46);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(129, 20);
+            this.tbName.Size = new System.Drawing.Size(150, 20);
             this.tbName.TabIndex = 8;
             // 
             // tbBadHabits
             // 
-            this.tbBadHabits.Location = new System.Drawing.Point(97, 127);
+            this.tbBadHabits.Location = new System.Drawing.Point(91, 124);
             this.tbBadHabits.Name = "tbBadHabits";
-            this.tbBadHabits.Size = new System.Drawing.Size(129, 20);
+            this.tbBadHabits.Size = new System.Drawing.Size(150, 20);
             this.tbBadHabits.TabIndex = 9;
             this.tbBadHabits.Visible = false;
             // 
             // nudDayBirthday
             // 
-            this.nudDayBirthday.Location = new System.Drawing.Point(97, 75);
+            this.nudDayBirthday.Location = new System.Drawing.Point(112, 72);
             this.nudDayBirthday.Maximum = new decimal(new int[] {
             31,
             0,
@@ -195,7 +195,7 @@
             // 
             // nudMonthBirthday
             // 
-            this.nudMonthBirthday.Location = new System.Drawing.Point(137, 75);
+            this.nudMonthBirthday.Location = new System.Drawing.Point(152, 72);
             this.nudMonthBirthday.Maximum = new decimal(new int[] {
             12,
             0,
@@ -217,7 +217,7 @@
             // 
             // nudYearBirthday
             // 
-            this.nudYearBirthday.Location = new System.Drawing.Point(177, 75);
+            this.nudYearBirthday.Location = new System.Drawing.Point(192, 72);
             this.nudYearBirthday.Maximum = new decimal(new int[] {
             2100,
             0,
@@ -239,7 +239,7 @@
             // 
             // nudWalkYear
             // 
-            this.nudWalkYear.Location = new System.Drawing.Point(177, 128);
+            this.nudWalkYear.Location = new System.Drawing.Point(192, 124);
             this.nudWalkYear.Maximum = new decimal(new int[] {
             2016,
             0,
@@ -262,7 +262,7 @@
             // 
             // nudWalkDay
             // 
-            this.nudWalkDay.Location = new System.Drawing.Point(97, 127);
+            this.nudWalkDay.Location = new System.Drawing.Point(112, 124);
             this.nudWalkDay.Maximum = new decimal(new int[] {
             31,
             0,
@@ -285,7 +285,7 @@
             // 
             // nudWalkMonth
             // 
-            this.nudWalkMonth.Location = new System.Drawing.Point(137, 127);
+            this.nudWalkMonth.Location = new System.Drawing.Point(152, 124);
             this.nudWalkMonth.Maximum = new decimal(new int[] {
             12,
             0,
@@ -308,7 +308,7 @@
             // 
             // nudFindAnimal
             // 
-            this.nudFindAnimal.Location = new System.Drawing.Point(5, 20);
+            this.nudFindAnimal.Location = new System.Drawing.Point(6, 19);
             this.nudFindAnimal.Name = "nudFindAnimal";
             this.nudFindAnimal.Size = new System.Drawing.Size(55, 20);
             this.nudFindAnimal.TabIndex = 17;
@@ -316,7 +316,7 @@
             // rbIsReserved
             // 
             this.rbIsReserved.AutoSize = true;
-            this.rbIsReserved.Location = new System.Drawing.Point(6, 151);
+            this.rbIsReserved.Location = new System.Drawing.Point(91, 150);
             this.rbIsReserved.Name = "rbIsReserved";
             this.rbIsReserved.Size = new System.Drawing.Size(83, 17);
             this.rbIsReserved.TabIndex = 18;
@@ -326,17 +326,17 @@
             // lbNotReserved
             // 
             this.lbNotReserved.FormattingEnabled = true;
-            this.lbNotReserved.Location = new System.Drawing.Point(6, 33);
+            this.lbNotReserved.Location = new System.Drawing.Point(9, 34);
             this.lbNotReserved.Name = "lbNotReserved";
-            this.lbNotReserved.Size = new System.Drawing.Size(120, 160);
+            this.lbNotReserved.Size = new System.Drawing.Size(144, 147);
             this.lbNotReserved.TabIndex = 19;
             // 
             // lbIsReserved
             // 
             this.lbIsReserved.FormattingEnabled = true;
-            this.lbIsReserved.Location = new System.Drawing.Point(132, 33);
+            this.lbIsReserved.Location = new System.Drawing.Point(159, 34);
             this.lbIsReserved.Name = "lbIsReserved";
-            this.lbIsReserved.Size = new System.Drawing.Size(120, 160);
+            this.lbIsReserved.Size = new System.Drawing.Size(144, 147);
             this.lbIsReserved.TabIndex = 20;
             // 
             // gbCreation
@@ -360,7 +360,7 @@
             this.gbCreation.Controls.Add(this.nudMonthBirthday);
             this.gbCreation.Location = new System.Drawing.Point(9, 8);
             this.gbCreation.Name = "gbCreation";
-            this.gbCreation.Size = new System.Drawing.Size(235, 172);
+            this.gbCreation.Size = new System.Drawing.Size(251, 172);
             this.gbCreation.TabIndex = 21;
             this.gbCreation.TabStop = false;
             this.gbCreation.Text = "Add Animals";
@@ -368,9 +368,9 @@
             // nudChipNumber
             // 
             this.nudChipNumber.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.nudChipNumber.Location = new System.Drawing.Point(97, 101);
+            this.nudChipNumber.Location = new System.Drawing.Point(91, 98);
             this.nudChipNumber.Name = "nudChipNumber";
-            this.nudChipNumber.Size = new System.Drawing.Size(129, 20);
+            this.nudChipNumber.Size = new System.Drawing.Size(150, 20);
             this.nudChipNumber.TabIndex = 19;
             // 
             // groupBox1
@@ -379,16 +379,16 @@
             this.groupBox1.Controls.Add(this.btnDeleteAnimal);
             this.groupBox1.Controls.Add(this.nudFindAnimal);
             this.groupBox1.Controls.Add(this.showInfoButton);
-            this.groupBox1.Location = new System.Drawing.Point(9, 182);
+            this.groupBox1.Location = new System.Drawing.Point(9, 186);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(235, 49);
+            this.groupBox1.Size = new System.Drawing.Size(251, 49);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Get animal info";
             // 
             // btnReserve
             // 
-            this.btnReserve.Location = new System.Drawing.Point(177, 19);
+            this.btnReserve.Location = new System.Drawing.Point(189, 18);
             this.btnReserve.Name = "btnReserve";
             this.btnReserve.Size = new System.Drawing.Size(56, 23);
             this.btnReserve.TabIndex = 24;
@@ -397,9 +397,9 @@
             // 
             // btnDeleteAnimal
             // 
-            this.btnDeleteAnimal.Location = new System.Drawing.Point(126, 19);
+            this.btnDeleteAnimal.Location = new System.Drawing.Point(136, 18);
             this.btnDeleteAnimal.Name = "btnDeleteAnimal";
-            this.btnDeleteAnimal.Size = new System.Drawing.Size(50, 23);
+            this.btnDeleteAnimal.Size = new System.Drawing.Size(47, 23);
             this.btnDeleteAnimal.TabIndex = 18;
             this.btnDeleteAnimal.Text = "Delete";
             this.btnDeleteAnimal.UseVisualStyleBackColor = true;
@@ -407,24 +407,27 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnDeleteSelectedAnimal);
-            this.groupBox2.Controls.Add(this.btnSort);
-            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.btnExport);
+            this.groupBox2.Controls.Add(this.btnLoad);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.lbNotReserved);
+            this.groupBox2.Controls.Add(this.btnSave);
+            this.groupBox2.Controls.Add(this.btnSort);
+            this.groupBox2.Controls.Add(this.btnDeleteSelectedAnimal);
             this.groupBox2.Controls.Add(this.lbIsReserved);
-            this.groupBox2.Location = new System.Drawing.Point(250, 8);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Location = new System.Drawing.Point(266, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(260, 235);
+            this.groupBox2.Size = new System.Drawing.Size(313, 223);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "List of Animals in shelter";
             // 
             // btnDeleteSelectedAnimal
             // 
-            this.btnDeleteSelectedAnimal.Location = new System.Drawing.Point(105, 199);
+            this.btnDeleteSelectedAnimal.Location = new System.Drawing.Point(48, 192);
             this.btnDeleteSelectedAnimal.Name = "btnDeleteSelectedAnimal";
-            this.btnDeleteSelectedAnimal.Size = new System.Drawing.Size(147, 23);
+            this.btnDeleteSelectedAnimal.Size = new System.Drawing.Size(89, 23);
             this.btnDeleteSelectedAnimal.TabIndex = 26;
             this.btnDeleteSelectedAnimal.Text = "Delete selected";
             this.btnDeleteSelectedAnimal.UseVisualStyleBackColor = true;
@@ -432,9 +435,9 @@
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(36, 199);
+            this.btnSort.Location = new System.Drawing.Point(6, 192);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(63, 23);
+            this.btnSort.Size = new System.Drawing.Size(36, 23);
             this.btnSort.TabIndex = 25;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = true;
@@ -443,28 +446,28 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(129, 18);
+            this.label6.Location = new System.Drawing.Point(156, 18);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
+            this.label6.Size = new System.Drawing.Size(94, 13);
             this.label6.TabIndex = 23;
-            this.label6.Text = "Reserved animals";
+            this.label6.Text = "Reserved animals:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 18);
+            this.label5.Location = new System.Drawing.Point(6, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.Size = new System.Drawing.Size(112, 13);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Non reserved animals";
+            this.label5.Text = "Non reserved animals:";
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Comic Sans MS", 128.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Yellow;
-            this.btnSave.Location = new System.Drawing.Point(12, 249);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSave.Location = new System.Drawing.Point(143, 192);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(495, 271);
+            this.btnSave.Size = new System.Drawing.Size(41, 23);
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -476,16 +479,17 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(746, 219);
+            this.btnLoad.Location = new System.Drawing.Point(190, 192);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.Size = new System.Drawing.Size(40, 23);
             this.btnLoad.TabIndex = 25;
-            this.btnLoad.Text = "ah KOOI";
+            this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnExport
             // 
+<<<<<<< HEAD
             this.btnExport.Location = new System.Drawing.Point(693, 86);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(75, 23);
@@ -493,15 +497,27 @@
             this.btnExport.Text = "Xport";
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+=======
+            this.btnExport.Location = new System.Drawing.Point(236, 192);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(67, 23);
+            this.btnExport.TabIndex = 27;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+>>>>>>> master
             // 
             // AdministrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1139, 532);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
+=======
+            this.ClientSize = new System.Drawing.Size(588, 243);
+>>>>>>> master
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbCreation);

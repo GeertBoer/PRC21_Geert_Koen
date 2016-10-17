@@ -12,17 +12,8 @@ namespace AnimalShelter
     public class Administration
     {
         public List<Animal> Animals { get; private set; }
-/* SERIAL KAK
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("Animals", this.Animals);
-        }
 
-        public Administration(SerializationInfo info, StreamingContext context)
-        {
-            Animals = (List<Animal>)info.GetValue("Animals", Animals.GetType());
-        }
-*/
+
         public Administration()
         {
             Animals = new List<Animal>();
@@ -111,19 +102,37 @@ namespace AnimalShelter
         public void Save(string path)
         {
             IFormatter formatter = new BinaryFormatter();
-            
-            using (Stream stream = new FileStream(path, FileMode.OpenOrCreate))
+
+            try
             {
-                formatter.Serialize(stream, Animals);
+                using (Stream stream = new FileStream(path, FileMode.OpenOrCreate))
+                {
+                    formatter.Serialize(stream, Animals);
+                }
+            }
+            catch (ArgumentException)
+            {
+                //GEEF GEEN MELDING: FOUT SPREEKT VOOR ZICH
             }
         }
 
         public void Load(string path)
         {
             IFormatter formatter = new BinaryFormatter();
-            using (Stream stream = new FileStream(path, FileMode.Open))
+            try
+            { 
+                using (Stream stream = new FileStream(path, FileMode.Open))
+                {
+                    Animals = (List<Animal>)formatter.Deserialize(stream);
+                }
+            }
+            catch (FileNotFoundException)
             {
-                Animals = (List<Animal>)formatter.Deserialize(stream);
+                System.Windows.Forms.MessageBox.Show("Vul een correcte bestandsnaam in");
+            }
+            catch (SerializationException)
+            {
+                System.Windows.Forms.MessageBox.Show("Kies een geldig bestand");
             }
         }
 
