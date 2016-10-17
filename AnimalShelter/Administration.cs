@@ -111,19 +111,39 @@ namespace AnimalShelter
         public void Save(string path)
         {
             IFormatter formatter = new BinaryFormatter();
-            
-            using (Stream stream = new FileStream(path, FileMode.OpenOrCreate))
+
+            try
             {
-                formatter.Serialize(stream, Animals);
+                using (Stream stream = new FileStream(path, FileMode.OpenOrCreate))
+                {
+                    formatter.Serialize(stream, Animals);
+                }
+            }
+            catch (ArgumentException)
+            {
+                //GEEF GEEN MELDING: FOUT SPREEKT VOOR ZICH
+
+                //System.Windows.Forms.MessageBox.Show("Vul een bestandsnaam in");
             }
         }
 
         public void Load(string path)
         {
             IFormatter formatter = new BinaryFormatter();
-            using (Stream stream = new FileStream(path, FileMode.Open))
+            try
             {
-                Animals = (List<Animal>)formatter.Deserialize(stream);
+                using (Stream stream = new FileStream(path, FileMode.Open))
+                {
+                    Animals = (List<Animal>)formatter.Deserialize(stream);
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                System.Windows.Forms.MessageBox.Show("Vul een correcte bestandsnaam in");
+            }
+            catch (SerializationException)
+            {
+                System.Windows.Forms.MessageBox.Show("Kies een geldig bestand");
             }
         }
     }
