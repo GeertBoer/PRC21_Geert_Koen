@@ -124,7 +124,8 @@ namespace AnimalShelterTest
             Administration a = new Administration();
             Cat c = new Cat(38, date, "Ryan", "Zit altijd in de ballenbak met een kater");
             a.Add(c);
-
+            string result = Path.GetTempFileName();
+            a.Save(result);
             bool exists = a.CheckChipNrIsAvailable(-100);
             Assert.AreEqual(false, exists);
         }
