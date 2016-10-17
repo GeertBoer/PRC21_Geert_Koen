@@ -126,5 +126,18 @@ namespace AnimalShelter
                 Animals = (List<Animal>)formatter.Deserialize(stream);
             }
         }
+
+        public void Export(string fileName)
+        {
+            using (TextWriter textWriter = new StreamWriter(fileName))
+            {
+                foreach (Animal animal in Animals)
+                {
+                    textWriter.WriteLine(animal.ToString());
+                }
+                
+            }
+            
+        }
     }
 }

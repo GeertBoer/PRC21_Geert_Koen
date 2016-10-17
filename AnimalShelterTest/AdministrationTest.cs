@@ -1,6 +1,7 @@
 ﻿using System;
 using AnimalShelter;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
 namespace AnimalShelterTest
 {
@@ -8,6 +9,7 @@ namespace AnimalShelterTest
     public class AdministrationTest
     {
         SimpleDate date = new SimpleDate(12, 12, 1999);
+        
         [TestMethod]
 
         public void AddNewCatTest()
@@ -126,5 +128,41 @@ namespace AnimalShelterTest
             bool exists = a.CheckChipNrIsAvailable(-100);
             Assert.AreEqual(false, exists);
         }
+
+        [TestMethod]
+        public void FindAnimalInAnEmptyList()
+        {
+            Administration a = new Administration();
+
+            a.FindAnimal(10);
+            Assert.AreEqual(null, null);
+        }
+
+        [TestMethod]
+        public void IsReservedGetsInverted()
+        {
+            Administration a = new Administration();
+            Cat cat = new Cat(10, date, "Geert", "Eet ger kipsaté");
+            a.Add(cat);
+
+            a.AddOrRemoveReservation(cat.ChipRegistrationNumber);
+            Assert.AreEqual(true, cat.IsReserved);
+        }
+
+        [TestMethod]
+        public void FileGetsSavedSuccesfully()
+        {
+            Administration a = new Administration();
+            Cat cat = new Cat(10, date, "Geert", "Eet ger kipsaté");
+            a.Add(cat);
+            string path = Path.GetTempFileName();
+            a.Save(path);
+            
+            Administration b = new Administration();
+            b.Load(path);
+            Cat newCat = b.FindAnimal(cat.ChipRegistrationNumber) as Cat;
+            Assert.AreEqual(cat.ToString(), newCat.ToString());
+        }
+        
     }
 }

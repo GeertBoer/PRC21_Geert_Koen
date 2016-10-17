@@ -237,5 +237,12 @@ namespace AnimalShelter
             admin.Load(loadPath);
             updateListBoxes();
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog();
+            string fileName = saveFileDialog1.FileName;
+            admin.Export(fileName);
+        }
     }
 }
