@@ -12,17 +12,8 @@ namespace AnimalShelter
     public class Administration
     {
         public List<Animal> Animals { get; private set; }
-/* SERIAL KAK
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("Animals", this.Animals);
-        }
 
-        public Administration(SerializationInfo info, StreamingContext context)
-        {
-            Animals = (List<Animal>)info.GetValue("Animals", Animals.GetType());
-        }
-*/
+
         public Administration()
         {
             Animals = new List<Animal>();
@@ -122,8 +113,6 @@ namespace AnimalShelter
             catch (ArgumentException)
             {
                 //GEEF GEEN MELDING: FOUT SPREEKT VOOR ZICH
-
-                //System.Windows.Forms.MessageBox.Show("Vul een bestandsnaam in");
             }
         }
 
@@ -131,7 +120,7 @@ namespace AnimalShelter
         {
             IFormatter formatter = new BinaryFormatter();
             try
-            {
+            { 
                 using (Stream stream = new FileStream(path, FileMode.Open))
                 {
                     Animals = (List<Animal>)formatter.Deserialize(stream);
